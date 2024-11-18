@@ -1,12 +1,12 @@
 import { db } from "../name";
 import createAnswerCollection from "./answer.collection";
-import createCommentCollection from "./comment.collection";
+import createCommentCollection from "./comment.collections";
 import createQuestionCollection from "./question.collection";
 import createVoteCollection from "./vote.collection";
 
 import { databases } from "./config";
 
-export default async function getOrCreateDB(){
+export default async function getOrCreateDB() {
   try {
     await databases.get(db)
     console.info("Database connection")
